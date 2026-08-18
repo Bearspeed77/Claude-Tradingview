@@ -6,9 +6,20 @@
   },
   "timeframes_to_check": ["1W", "1D", "4H"],
   "bias_criteria": {
-    "bullish": "Price above 500 EMA, RSI on daily between 45 and 70, higher highs and higher lows on 4H",
-    "bearish": "Price below 500 EMA, RSI on daily below 45, lower highs and lower lows on 4H",
-    "neutral": "Price chopping around 500 EMA, RSI between 40 and 60, no clear structure"
+    "bullish": "Price above 50 EMA, RSI on daily between 45 and 70, higher highs and higher lows on 4H",
+    "bearish": "Price below 50 EMA, RSI on daily below 45, lower highs and lower lows on 4H",
+    "neutral": "Price chopping around 50 EMA, RSI between 40 and 60, no clear structure"
+  },
+  "bias_engine": {
+    "trend_ema_period": 50,
+    "rsi_period": 14,
+    "rsi_bull_min": 45,
+    "rsi_bull_max": 70,
+    "rsi_bear_max": 45,
+    "rsi_neutral_min": 40,
+    "rsi_neutral_max": 60,
+    "require_structure": true,
+    "structure_pivot_lookback": 2
   },
   "risk_rules": {
     "max_risk_per_trade": "1% of portfolio",
